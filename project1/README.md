@@ -3,7 +3,7 @@
 They are shown in the whole video. I used TTC to calculate the avoidance force. It is obviously shown at the bottom left at beginning of the video.  
 ## Particle system
 I implemented particle system which appear on about 20 second of the video. The particles appear from goals as an agent reaches.  
-They follow a specific pattern in general. But the movement of a single particle is different from others.  
+They follow a specific pattern in general. But the movement of a single particle is random.  
 ## 3D Rendering & Camera
 This is shown in the whole video.  
 ## User Scenario Editing and Realtime User Interaction  
