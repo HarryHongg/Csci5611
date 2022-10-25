@@ -79,15 +79,8 @@ void draw() {
     ellipse(100, 200, shpereR, shpereR);
   }
   
-  //Draw the lattice
   drawLattice();
-  updateParticles(); //Update forces acting on particles and positions according to Euler
-
-
-
-  
-
-  //stroke(255);
+  updateParticles();
 }
 
 
@@ -146,7 +139,7 @@ void createLattice() {
   }
 }
 
-// Draw lattice
+
 void drawLattice() {
   fill(255);
   strokeWeight(1);
@@ -377,7 +370,7 @@ void updateParticles() {
  
   for (int r = 0; r < row; r++) {      
     for (int c = 0; c < col; c++) {
-      if (!particles[c][r].fixed) {  //Upate all nodes except the fixed ones 
+      if (!particles[c][r].fixed) {
         particles[c][r].acc.set(PVector.div(particles[c][r].force, mass));
         particles[c][r].vel.set(euler(particles[c][r].vel.x, particles[c][r].acc.x, ts), euler(particles[c][r].vel.y, particles[c][r].acc.y, ts), 0);
         particles[c][r].pos.set(euler(particles[c][r].pos.x, particles[c][r].vel.x, ts), euler(particles[c][r].pos.y, particles[c][r].vel.y, ts), 0);
