@@ -1,6 +1,6 @@
 # Features and timestamp
 ## Cloth Simulation
-It is shown in the cloth.mp4. I used a matrix to hold the particles which form the cloth. For each particle, I compute the force from at most eight nearest particles.  
+It is shown in the cloth.mp4. I used a matrix to hold the particles which form the cloth. For each particle, I compute the force between particles from at most eight nearest particles.  
 ## Air Drag for Cloth
 It is shown in the colth.mp4 and air.mp4. After 15 second of the cloth.mp4, it shows vary of winds speed. At beggining of the air.mp4, the cloth falls with air drag. Then, it is blows up and falls without air drag at about 23 second. For each particles, I compute its part of air drag in an fixed area.  
 ## User Interaction
