@@ -1,6 +1,6 @@
 class FABRIK {
   private int num;
-  Vec2 start;
+  Vec2 root;
   Vec2 goal;
   float[] lines;
   float[] angles;
@@ -12,9 +12,9 @@ class FABRIK {
   float legW1 = 35;
   float legW2 = 30;
   
-  public FABRIK(int segments, Vec2 startPoint, Vec2 goalPoint) {
-    num = segments;
-    start = newV(startPoint);
+  public FABRIK(int idx, Vec2 rootPoint, Vec2 goalPoint) {
+    num = idx;
+    root = newV(rootPoint);
     goal = newV(goalPoint);
     lines = new float[num - 1];
     angles = new float[num - 1];
@@ -34,7 +34,7 @@ class FABRIK {
   
 
   public void updatePoint() {
-    points[0] = newV(start);
+    points[0] = newV(root);
     for (int i = 1; i < num; ++i) {
       Vec2 dir = new Vec2(cos(angles[i - 1]), sin(angles[i - 1])).times(lines[i - 1]);
       points[i] = newV(points[i-1]).plus(dir);
@@ -68,7 +68,7 @@ class FABRIK {
   }
 
   public void forward() {
-    points[0] = newV(start);
+    points[0] = newV(root);
     for (int i = 1; i < num; ++i) {
       Vec2 a = newV(points[i-1]);
       Vec2 b = newV(points[i]);
@@ -103,7 +103,7 @@ class FABRIK {
   }
   
   public void setRoot(Vec2 point) {
-    start = newV(point);
+    root = newV(point);
   }
   
   public void setJointLimit(int i, Vec2 limit){
