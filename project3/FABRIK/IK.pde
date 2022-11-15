@@ -42,17 +42,17 @@ void draw()
   background(250,250,250);
   float dt = 1.0/frameRate;
   move(dt);
-  // set goal to mouse pos
+
   goal = new Vec2(mouseX, mouseY);
 
-  // move points
-  rArm.fit(1);
+
+  rArm.solve(1);
   rArm.setGoal(goal);
-  lArm.fit(1);
+  lArm.solve(1);
   lArm.setGoal(goal);
-  rLeg.fit(1);
+  rLeg.solve(1);
   rLeg.setGoal(rLegGoal);
-  lLeg.fit(1);
+  lLeg.solve(1);
   lLeg.setGoal(lLegGoal);
   // Draw arm
   rArm.drawArm();
