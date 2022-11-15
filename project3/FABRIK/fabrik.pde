@@ -12,8 +12,8 @@ class FABRIK {
   float legW1 = 35;
   float legW2 = 30;
   
-  public FABRIK(int idx, Vec2 rootPoint, Vec2 goalPoint) {
-    num = idx;
+  public FABRIK(int number, Vec2 rootPoint, Vec2 goalPoint) {
+    num = number;
     root = newV(rootPoint);
     goal = newV(goalPoint);
     lines = new float[num - 1];
