@@ -105,7 +105,6 @@ void move(float dt){
   lLeg.setRoot(new Vec2(start_body.x-bodyWidth/2+10,start_body.y+bodyHeight/2));
   rLeg.setGoal(new Vec2(400+bodyWidth/2-5+2*rWalk,260+bodyHeight/2+130+110+stepH(rWalk)-10));
   lLeg.setGoal(new Vec2(400-bodyWidth/2+5+2*lWalk,260+bodyHeight/2+130+110+stepH(lWalk)-10));
-  println(lWalk,rWalk);
 }
 
 boolean leftPressed, rightPressed;

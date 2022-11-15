@@ -34,12 +34,8 @@ class FABRIK {
   
 
   public void updatePoint() {
-    points[0] = newV(start); // First point at the start
+    points[0] = newV(start);
     for (int i = 1; i < num; ++i) {
-      /*
-      dir is the vector representing the shaft at its angle
-      add this vector to the previous position to find the current point
-      */
       Vec2 dir = new Vec2(cos(angles[i - 1]), sin(angles[i - 1])).times(lines[i - 1]);
       points[i] = newV(points[i-1]).plus(dir);
     }
@@ -57,7 +53,7 @@ class FABRIK {
   }
 
   void backward() {
-    points[num - 1] = newV(goal); // Set last point on goal
+    points[num - 1] = newV(goal);
     for (int i = num - 1; i > 0; --i) {
 
       Vec2 a = newV(points[i]);
