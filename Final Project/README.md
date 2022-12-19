@@ -1,5 +1,6 @@
 ## Final report
-[final_report.pdf](https://github.com/HarryHongg/Csci5611/files/10251035/final_report.pdf)
+[final_report.pdf](https://github.com/HarryHongg/Csci5611/files/10261360/final_report.pdf)
+
 
 ## Sample 
 Use the up and down keys to control the intensity, left and right keys to control direction, "L" key to launch the bird, and space to pause the game.  
