@@ -4,7 +4,7 @@
 
 
 
-## Sample 
+## Samples 
 Use the up and down keys to control the intensity, left and right keys to control direction, "L" key to launch the bird, and space to pause the game.  
 If the bird does not launch, try restarting the app.
 ![final](https://user-images.githubusercontent.com/57870719/208228246-291ba024-b970-460f-be8d-0a469cef5b5d.png)
